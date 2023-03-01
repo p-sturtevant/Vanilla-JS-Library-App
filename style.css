@@ -57,6 +57,14 @@ h1 {
   text-align: center;
 }
 
+.top {
+  background-color: white;
+}
+.title {
+  color: black;
+  margin: 0;
+}
+
 button {
   margin-top: 50px;
   border-radius: 8px;
@@ -77,15 +85,64 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Modal */
+
+/* The modal */
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 50px;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+  color: #1a1a1a;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: 1px solid #888;
+  width: 15%;
+  height: 45%;
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+}
+
+.modal-content input {
+  padding: 10px;
+}
+
+.modal-content input::-webkit-input-placeholder {
+  color: white;
+}
+
+.submit {
+  margin-top: 0px;
+}
+
+/* Close button */
+.close {
+  position: relative;
+  top: -50px;
+  left: 130px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
