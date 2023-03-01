@@ -20,6 +20,9 @@ function addBookToLibrary(author, title, pages, read) {
 function createLibraryList() {
   let list = document.querySelector(".book-container");
 
+  while (list.firstChild) {
+    list.removeChild(list.firstChild);
+  }
   myLibrary.forEach((book) => {
     let card = document.createElement("div");
     card.classList.add("card");
